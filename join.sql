@@ -47,3 +47,20 @@ SELECT * FROM post as p
 
 SELECT * FROM post as p
    INNER JOIN "user" as u on p.user_id = u.id
+
+INSERT into post (title,user_id) VALUES
+('Enjoying a sunny day with Pritom !', null)
+
+INSERT into post (title,user_id) VALUES
+('Enjoying a sunny day with Pritom !', 3)
+
+INSERT INTO "user" (username) values('Pahar')
+
+SELECT * from post as p
+    LEFT JOIN "user" as u on p.user_id = u.id
+
+SELECT * from post as p
+    RIGHT JOIN "user" as u on p.user_id = u.id
+
+SELECT * from post as p
+    FULL JOIN "user" as u on p.user_id = u.id
